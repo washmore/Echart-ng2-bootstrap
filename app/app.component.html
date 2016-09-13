@@ -1,0 +1,41 @@
+<h1>{{title}}</h1>
+<div class="container">
+    <div class="page-header">
+        hahahahaahh哈哈哈哈哈
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="module">
+                <a routerLink="/userlist" routerLinkActive="active" class="list-group-item">
+                    <h4 class="list-group-item-heading">成员列表</h4>
+                    <p class="list-group-item-text">包括整个大家庭的各位成员!</p>
+                </a>
+                <a routerLink="/relation" routerLinkActive="active" class="list-group-item">
+                    <h4 class="list-group-item-heading">成员关系</h4>
+                    <p class="list-group-item-text">依靠血脉维系的关系是牢不可破的!</p>
+                </a>
+
+            </div>
+
+
+            <div class="module panel panel-default">
+                <div class="panel-heading">热门成员</div>
+                <div class="panel-body tags">
+                    <a href="#" class="label label-info">身边的故事</a>
+                    <a href="#" class="label label-info">nodeJs</a>
+                    <a href="#" class="label label-default">Net</a>
+                    <a href="#" class="label label-warning">JAVA</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+
+</div>
