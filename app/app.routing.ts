@@ -1,27 +1,18 @@
 import {Routes, RouterModule} from "@angular/router";
 import {ModuleWithProviders} from "@angular/core";
 import {AnotherComponent} from "./another.component";
-import {UserlistComponent} from "./userlist.component";
+import {UserDailyReportComponent} from "./user.daily.report.component";
 
 const appRoutes:Routes = [
     {
         path: '',
-        redirectTo: '/userlist',
+        redirectTo: '/dailyReport',
         pathMatch: 'full'
     }, {
-        path: 'userlist',
-        component: UserlistComponent
+        path: 'dailyReport',
+        component: UserDailyReportComponent
     }, {
         path: 'relation',
-        component: AnotherComponent
-    }, {
-        path: 'detail',
-        component: AnotherComponent
-    }, {
-        path: 'addUser',
-        component: AnotherComponent
-    }, {
-        path: 'editUser/:id',
         component: AnotherComponent
     }
 ];

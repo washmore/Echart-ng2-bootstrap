@@ -8,6 +8,8 @@ import "./rxjs-extensions";
 import {WelcomeComponent} from "./welcome.component";
 import {AnotherComponent} from "./another.component";
 import {UserlistComponent} from "./userlist.component";
+import {UserDailyReportComponent} from "./user.daily.report.component";
+import {CommonUtils} from "./common.utils";
 @NgModule({
     imports: [
         BrowserModule,
@@ -20,8 +22,9 @@ import {UserlistComponent} from "./userlist.component";
         WelcomeComponent,
         UserlistComponent,
         AnotherComponent,
+        UserDailyReportComponent,
     ],
-    providers: [],
+    providers: [CommonUtils],
     bootstrap: [AppComponent]
 })
 export class AppModule {
