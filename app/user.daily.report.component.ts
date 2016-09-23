@@ -51,16 +51,18 @@ export class UserDailyReportComponent implements OnInit {
                 data: []
             }]
         };
+        // DateFormatter.format(new Date(Date.now()), "zh_CN", 'yyyy-MM-dd');
         // 指定图表的配置项和数据
-        let url = 'http://localhost:8080/api/userDailyReport.cross';
+        let url = 'http://10.8.204.107:8080/api/userDailyReport.cross';
         this.http.get(url).subscribe(
             res => {
                 let result = res.json() as UserDailyReoport[];
-                let times = result.map(res=>this.commonUtils.getDateStr(res.ctime, false));
-                console.info(times);
+                // let times = result.map(res=>this.commonUtils.getDateStr(res.ctime, false));
+                // console.info(times);
+                let that = this;
                 $.each(result, function (i, e) {
                     option.series[0].data.push(e.userCount);
-                    option.xAxis.data.push(times[i]);
+                    option.xAxis.data.push(that.commonUtils.getDateStr(e.ctime, false));
                 });
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option);
